@@ -1,43 +1,46 @@
-# FehÈrjÈk
+# Feh√©rj√©k
 
 ## l. feladat
-  - adatok beolvas·sa a "aminosav.txt"-bÛl (using System.IO;)
-  - strukt˙ra haszn·lata
+  - adatok beolvas√°sa a "aminosav.txt"-b√≥l (using System.IO;)
+  - strukt√∫ra haszn√°lata
 
 ## 2. feladat
-  - tˆmegsz·mÌt·s
+  - t√∂megsz√°m√≠t√°s
 
 ## 3. feladat
-  - tˆmeg szerint sorrendbe rakni
+  - t√∂meg szerint sorrendbe rakni
 
 ## 4. feladat
-  - bsa.txt feldolgoz·s
-  - T·rol·stalan f·jlfeldolgoz·s
+  - bsa.txt feldolgoz√°s
+  - T√°rol√°stalan f√°jlfeldolgoz√°s
   - C H O N S ?????
   - ? Aminosav
   - levonni a H2O!
 
   
   +----------------------------------------------+
-  | Addig csin·ljuk amÌg van aminosav            |
+  
+  | Addig csin√°ljuk am√≠g van aminosav            |
+  
   |----------------------------------------------|
+  
   |                                              |
   |  +-------------------------+                 |
   |  |Beolvasuk egy sort       |                 |
-  |  |Nˆvelj¸k az aminosav sz·-|                 |
+  |  |N√∂velj√ºk az aminosav sz√°-|                 |
   |  |  mot                    |                 | 
   |  +-------+-----------------+                 |
   |          |                                   |
   |          |                                   |
   |  +-------v-----------------+                 |
-  |  |BeazonosÌtjuk az amino-  |                 |
+  |  |Beazonos√≠tjuk az amino-  |                 |
   |  |  savat                  |                 |
   |  |                         |                 |
   |  +-------+-----------------+                 |
   |          |                                   |
   |          |                                   |
   |  +-------v-----------------+                 |
-  |  | AlkotÛelemk nˆvelÈse    |                 |
+  |  | Alkot√≥elemk n√∂vel√©se    |                 |
   |  |                         |                 |
   |  |                         |                 |
   |  +-------------------------+                 |
