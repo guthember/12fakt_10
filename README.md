@@ -1,18 +1,49 @@
-# FehÃ©rjÃ©k
+# Fehérjék
 
 ## l. feladat
-  - adatok beolvasÃ¡sa a "aminosav.txt"-bÃ³l (using System.IO;)
-  - struktÃºra hasznÃ¡lata
+  - adatok beolvasása a "aminosav.txt"-ból (using System.IO;)
+  - struktúra használata
 
 ## 2. feladat
-  - tÃ¶megszÃ¡mÃ­tÃ¡s
+  - tömegszámítás
 
 ## 3. feladat
-  - tÃ¶meg szerint sorrendbe rakni
+  - tömeg szerint sorrendbe rakni
 
 ## 4. feladat
-  - bsa.txt feldolgozÃ¡s
-  - TÃ¡rolÃ¡stalan fÃ¡jlfeldolgozÃ¡s
+  - bsa.txt feldolgozás
+  - Tárolástalan fájlfeldolgozás
   - C H O N S ?????
   - ? Aminosav
-  - levonni a H2O
+  - levonni a H2O!
+
+  
+  +----------------------------------------------+
+  | Addig csináljuk amíg van aminosav            |
+  |----------------------------------------------|
+  |                                              |
+  |  +-------------------------+                 |
+  |  |Beolvasuk egy sort       |                 |
+  |  |Növeljük az aminosav szá-|                 |
+  |  |  mot                    |                 | 
+  |  +-------+-----------------+                 |
+  |          |                                   |
+  |          |                                   |
+  |  +-------v-----------------+                 |
+  |  |Beazonosítjuk az amino-  |                 |
+  |  |  savat                  |                 |
+  |  |                         |                 |
+  |  +-------+-----------------+                 |
+  |          |                                   |
+  |          |                                   |
+  |  +-------v-----------------+                 |
+  |  | Alkotóelemk növelése    |                 |
+  |  |                         |                 |
+  |  |                         |                 |
+  |  +-------------------------+                 |
+  |                                              |
+  +----------------------------------------------+
+
+## 5. feladat
+  - Kimotripszin -> Y, W, F hasít
+  - leghosszabb lánc eleje, vége, hossza

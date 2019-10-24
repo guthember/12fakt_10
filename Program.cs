@@ -22,6 +22,8 @@ namespace _2006Feherje
   class Program
   {
     static Aminosav[] aminok = new Aminosav[20];
+    static char[] bsaLanc = new char[1000];
+    static int bsaHossz = 0;
                                   // C  H   O   N   S
     static int[] tomeg = new int[] {12, 1, 16, 14, 32 };
 
@@ -111,6 +113,7 @@ namespace _2006Feherje
       while (!bsa.EndOfStream)
       {
         char mit = Convert.ToChar(bsa.ReadLine());
+        bsaLanc[bsaHossz++] = mit;
         Aminosav epito = Melyik(mit);
         dbC += epito.szen;
         dbH += epito.hidrogen;
@@ -130,6 +133,25 @@ namespace _2006Feherje
                          dbC, dbH, dbO, dbN, dbS);
     }
 
+    static void Otodik()
+    {
+      Console.WriteLine("\n5. feladat");
+      int eleje = 0, vege, hossza;
+
+      for (int i = 0; i < bsaHossz; i++)
+      {
+        if (bsaLanc[i] == 'Y' || bsaLanc[i] == 'W' || bsaLanc[i] == 'F')
+        {
+          vege = i;
+          hossza = vege - eleje;
+          //??? egyelőre mert nincs időnk :-(
+        }
+      }
+
+
+
+    }
+
     static Aminosav Melyik(char ch)
     {
       int i = 0;
@@ -147,6 +169,7 @@ namespace _2006Feherje
       Masodik();
       Harmadik();
       Negyedik();
+      Otodik();
 
       Console.ReadKey();
     }
