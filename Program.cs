@@ -11,11 +11,11 @@ namespace _2006Feherje
   {
     public string rovid;
     public char betujel;
-    public int szen;
-    public int hidrogen;
-    public int oxigen;
-    public int nitrogen;
-    public int ken;
+    public int szen; // C
+    public int hidrogen; // H
+    public int oxigen; // O 
+    public int nitrogen; // N
+    public int ken; // S
     public int tomeg;
   }
 
@@ -89,14 +89,56 @@ namespace _2006Feherje
       // kiírása
       for (int i = 0; i < 20; i++)
       {
-        Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7}",
-          aminok[i].rovid, aminok[i].betujel, aminok[i].szen.ToString().PadLeft(2),
-          aminok[i].hidrogen.ToString().PadLeft(2), aminok[i].oxigen.ToString().PadLeft(2),
-          aminok[i].nitrogen.ToString().PadLeft(2), aminok[i].ken.ToString().PadLeft(2), 
-          aminok[i].tomeg);
+        //Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7}",
+        //  aminok[i].rovid, aminok[i].betujel, aminok[i].szen.ToString().PadLeft(2),
+        //  aminok[i].hidrogen.ToString().PadLeft(2), aminok[i].oxigen.ToString().PadLeft(2),
+        //  aminok[i].nitrogen.ToString().PadLeft(2), aminok[i].ken.ToString().PadLeft(2), 
+        //  aminok[i].tomeg);
+        Console.WriteLine("{0} {1}", aminok[i].rovid, aminok[i].tomeg);
+      }
+    }
+
+    static void Negyedik()
+    {
+      Console.WriteLine("\n4. feladat");
+      // Tárolástalan fájlfeldolgozás
+      // C H O N S ?????
+      // ? Aminosav
+      // levonni a H2O!
+      int dbC = 0, dbH = 0, dbO = 0, dbN = 0, dbS = 0, dbAmino = 0;
+      StreamReader bsa = new StreamReader("bsa.txt");
+
+      while (!bsa.EndOfStream)
+      {
+        char mit = Convert.ToChar(bsa.ReadLine());
+        Aminosav epito = Melyik(mit);
+        dbC += epito.szen;
+        dbH += epito.hidrogen;
+        dbN += epito.nitrogen;
+        dbO += epito.oxigen;
+        dbS += epito.ken;
+        dbAmino++;
       }
 
+      bsa.Close();
 
+      // vízképződés miatt csökkenteni a H, O
+      dbH -= (2 * (dbAmino - 1));
+      dbO -= (dbAmino - 1);
+
+      Console.WriteLine("C {0} H {1} O {2} N {3} S {4}",
+                         dbC, dbH, dbO, dbN, dbS);
+    }
+
+    static Aminosav Melyik(char ch)
+    {
+      int i = 0;
+      while (ch != aminok[i].betujel)
+      {
+        i++;
+      }
+
+      return aminok[i];
     }
 
     static void Main(string[] args)
@@ -104,6 +146,7 @@ namespace _2006Feherje
       Elso();
       Masodik();
       Harmadik();
+      Negyedik();
 
       Console.ReadKey();
     }
